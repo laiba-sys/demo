@@ -500,6 +500,13 @@ const settings = {
           />
         </motion.div>
       </div>
+      <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{width:"50px"}}
+          className="fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-transform hover:scale-110 no-cursor-hover"
+        >
+          ↑
+        </button>
     </section>
      <section className="bg-white py-12" ref={ref}>
   <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -523,55 +530,63 @@ const settings = {
       </div>
     ))}
   </div>
+  <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{width:"50px"}}
+          className="fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-transform hover:scale-110 no-cursor-hover"
+        >
+          ↑
+        </button>
 </section>
 
 
+{/* Slider Section */}
 <section className="relative">
-  {/* Background image with white overlay */}
-  <div
-    className="absolute inset-0 bg-white opacity-50 z-0"
-    style={{
-      backgroundImage: `url('/mnt/data/1b05ca28-abbb-44dd-9631-6dac9939d8b0.png')`,
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-    }}
-  ></div>
-
-  <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
+  <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
     <h2 className="text-4xl font-bold text-center mb-4">
       Creative <span className="text-[#b8904c]">Projects That Define</span> Our Style
     </h2>
-    <p className="text-center max-w-2xl mx-auto mb-12 text-gray-700">
-      Our portfolio showcases a diverse range of projects, from beautifully crafted residential spaces functional and stylish commercial interiors
+    <p className="text-center max-w-2xl mx-auto mb-12 text-gray-700 text-sm sm:text-base md:text-lg">
+      Our portfolio showcases a diverse range of projects, from beautifully crafted residential spaces to functional and stylish commercial interiors
     </p>
 
     <Slider {...settings}>
       {sliderData.map((item, index) => (
-        <a
-          href={item.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          key={index}
-          className="px-3 outline-none focus:outline-none"
-        >
-          <div className="rounded-2xl overflow-hidden cursor-pointer shadow-lg bg-white">
+        <div key={index} className="px-2 sm:px-3">
+          <a
+            href={item.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block rounded-2xl overflow-hidden shadow-lg bg-white hover:shadow-2xl transition-all duration-500"
+          >
             <div className="relative">
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full h-72 object-cover rounded-t-2xl"
+                className="w-full h-64 sm:h-60 md:h-64 lg:h-72 object-cover rounded-t-2xl"
               />
               <span className="absolute top-3 left-3 bg-white bg-opacity-30 text-white text-xs font-semibold px-3 py-1 rounded-full">
                 {item.category}
               </span>
             </div>
             <h3 className="text-lg font-bold p-4 text-gray-900">{item.title}</h3>
-          </div>
-        </a>
+          </a>
+        </div>
       ))}
     </Slider>
+
+    {/* Removed the dots/buttons below slider */}
   </div>
+  <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{width:"50px"}}
+          className="fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-transform hover:scale-110 no-cursor-hover"
+        >
+          ↑
+        </button>
 </section>
+
+
 
 <footer className="text-gray-200">
       {/* 🔹 Top Section with background + overlay + footer content */}
@@ -692,6 +707,13 @@ const settings = {
           ANTRA .
         </h1>
       </div>
+      <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          style={{width:"50px"}}
+          className="fixed bottom-6 right-6 bg-orange-500 hover:bg-orange-600 text-white p-3 rounded-full shadow-lg transition-transform hover:scale-110 no-cursor-hover"
+        >
+          ↑
+        </button>
     </footer>
 
 
